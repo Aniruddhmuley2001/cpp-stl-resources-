@@ -1,12 +1,18 @@
 #include <iostream>
 #include <vector>       //Required for vector<int>
 #include <algorithm>    //Required for sort()
+#include <set>		//Required for set<int>
 
 using namespace std;
 
-int main() {
-	// your code goes here
-	int i = 0;
+bool f(int x, int y)
+{
+    return x > y;    
+}
+
+void vectorDemo()
+{
+    int i = 0;
 	vector<int> A =  {11, 2, 3, 14};
 	cout<<A[3]<<" => Accesing the element"<<endl;                   //Accesing an element  of array
 	
@@ -23,14 +29,31 @@ int main() {
 	
 	//Binary search with time complexity of O(logN)
 	bool present = binary_search(A.begin(), A.end(), 3);
-	cout<<present<<endl;
+	cout<<"Presence of 3 in array: "<<present<<endl;
 	present = binary_search(A.begin(), A.end(), 4);
-	cout<<present<<endl;
+	cout<<"Presence of 4 in array: "<<present<<endl;
 	cout<<"1 means present, 0 means absent"<<endl;
 	
 	//Appending value to array given
 	A.push_back(100); A.push_back(100); A.push_back(100); A.push_back(100); A.push_back(123);
 	cout<<"Result after appending values: ";
+	for(int x: A)
+	{
+	    cout << x <<" ";
+	}
+	cout<<endl;
+	
+	//lower and upper bound use O(logN) time for sorted arrays
+	vector<int>::iterator it = lower_bound(A.begin(), A.end(), 100); //Gives value >= the given number
+	auto it2 = upper_bound(A.begin(), A.end(), 100); //Gives value > the given number
+	cout<<"Value of lower bound: "<<*it<<endl;
+	cout<<"Value of upper bound: "<<*it2<<endl;
+	cout<<"Difference in the iterators: "<<it2 - it<<endl;
+	
+	//To check the order of sorting of array, by using comparator function f()
+	//Here, f will be taken for implementing sorting in the decreasing order
+	sort(A.begin(), A.end(), f);
+	cout<<"Result after sorting: ";
 	while(A[i])
 	{
 	    cout<<A[i]<<" ";
@@ -39,12 +62,22 @@ int main() {
 	cout<<endl;
 	i = 0;
 	
-	//lower and upper bound use O(logN) time for sorted arrays
-	vector<int>::iterator it = lower_bound(A.begin(), A.end(), 100); //Gives value >= the given number
-	auto it2 = upper_bound(A.begin(), A.end(), 100); //Gives value > the given number
-	cout<<"Value of lower bound: "<<*it<<endl;
-	cout<<"Value of upper bound: "<<*it2<<endl;
-	cout<<"Difference in the iterators: "<<it2 - it<<endl;
+	//To increase the value of every element of array by 1(as an example)
+	for(int &x : A) //by reference
+	    x++;
+	cout<<"Resultant vector array after increasing the factor by 1: ";
+	for(int x : A)
+	    cout << x <<" ";
+	cout<<endl;
+}
+
+void setDemo(){
+    
+}
+
+int main() {
+	// your code goes here
+	vectorDemo();
 	
 	return 0;
 }
