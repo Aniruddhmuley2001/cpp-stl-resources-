@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>       //Required for vector<int>
 #include <algorithm>    //Required for sort()
-#include <set>		//Required for set<int>
+#include <set>          //Required for set<int>
 
 using namespace std;
 
@@ -12,6 +12,7 @@ bool f(int x, int y)
 
 void vectorDemo()
 {
+    cout<<"FUNCTIONALITIES IN A VECTOR INT"<<endl;
     int i = 0;
 	vector<int> A =  {11, 2, 3, 14};
 	cout<<A[3]<<" => Accesing the element"<<endl;                   //Accesing an element  of array
@@ -69,15 +70,53 @@ void vectorDemo()
 	for(int x : A)
 	    cout << x <<" ";
 	cout<<endl;
+	cout<<endl;
 }
 
 void setDemo(){
+    cout<<"FUNCTIONALITIES IN A SET INT: O(logN) time complexity"<<endl;
+    set<int> S;
+    //Insertion of values
+    S.insert(1); S.insert(2); S.insert(-1); S.insert(-10); 
+    cout<<"Resultant array is: ";
+    for(int x : S)
+	    cout << x <<" ";
+	cout<<endl;
+	
+	//Searching for a value
+	auto it = S.find(-1);
+	if(it == S.end())
+	    cout<<"not present\n"<<endl;      //If the no. doesn't exist in array, we get iterator as S.end()
+	else
+	    cout<<"present: "<<*it<<endl;
+	    
+    //Upper and lower bound
+    //Both are pre-defined functions, do not require S.begin() and S.end() parameters to be taken, as in vectorDemo examples
+    auto it2 = S.upper_bound(-1);   //existing value
+    auto it3 = S.upper_bound(0);    //non-existing value
+    auto it4 = S.upper_bound(2);    //non-existing value
+    cout<<"Upper bound of -1: "<<*it2<<endl;    //1(next greater value than given)
+    cout<<"Upper bound of 0: "<<*it3<<endl;     //1(first greater value than given)
+    cout<<"Upper bound of 2: "<<*it4<<endl;     //S.end() gets printed
     
+    auto it5 = S.lower_bound(-1);   //existing value
+    auto it6 = S.lower_bound(0);    //non-existing value
+    auto it7 = S.lower_bound(-10);    //lowest value
+    cout<<"Lower bound of -1: "<<*it5<<endl;    //-1(same value)
+    cout<<"Lower bound of 0: "<<*it6<<endl;     //1(first greater value than given)
+    cout<<"Lower bound of -10: "<<*it7<<endl;     //-10(same value)
+    
+    //Element erasure
+    S.erase(-1);
+    cout<<"Array after erasure of -1: ";
+    for(int x: S)
+        cout << x << " ";
+    cout<<endl;
 }
 
 int main() {
 	// your code goes here
 	vectorDemo();
-	
+	setDemo();
 	return 0;
 }
