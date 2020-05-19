@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>       //Required for vector<int>
+#include <algorithm>    //Required for sort()
+
+using namespace std;
+
+int main() {
+	// your code goes here
+	int i = 0;
+	vector<int> A =  {11, 2, 3, 14};
+	cout<<A[3]<<" => Accesing the element"<<endl;                   //Accesing an element  of array
+	
+	//Sorting of Array
+	sort(A.begin(), A.end());           //O(NlogN)
+	cout<<"The sorted array is: ";
+	while(A[i])
+	{
+	    cout<<A[i]<<" ";
+	    i++;
+	}
+	cout<<endl;
+	i = 0;
+	
+	//Binary search with time complexity of O(logN)
+	bool present = binary_search(A.begin(), A.end(), 3);
+	cout<<present<<endl;
+	present = binary_search(A.begin(), A.end(), 4);
+	cout<<present<<endl;
+	cout<<"1 means present, 0 means absent"<<endl;
+	
+	//Appending value to array given
+	A.push_back(100); A.push_back(100); A.push_back(100); A.push_back(100); A.push_back(123);
+	cout<<"Result after appending values: ";
+	while(A[i])
+	{
+	    cout<<A[i]<<" ";
+	    i++;
+	}
+	cout<<endl;
+	i = 0;
+	
+	//lower and upper bound use O(logN) time for sorted arrays
+	vector<int>::iterator it = lower_bound(A.begin(), A.end(), 100); //Gives value >= the given number
+	auto it2 = upper_bound(A.begin(), A.end(), 100); //Gives value > the given number
+	cout<<"Value of lower bound: "<<*it<<endl;
+	cout<<"Value of upper bound: "<<*it2<<endl;
+	cout<<"Difference in the iterators: "<<it2 - it<<endl;
+	
+	return 0;
+}
