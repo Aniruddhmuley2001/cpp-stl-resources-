@@ -2,6 +2,7 @@
 #include <vector>       //Required for vector<int>
 #include <algorithm>    //Required for sort()
 #include <set>          //Required for set<int>
+#include <map>          //Required for map<int, int>
 
 using namespace std;
 
@@ -106,17 +107,39 @@ void setDemo(){
     cout<<"Lower bound of 0: "<<*it6<<endl;     //1(first greater value than given)
     cout<<"Lower bound of -10: "<<*it7<<endl;     //-10(same value)
     
-    //Element erasure
+    //Element erasure in O(logN) time
     S.erase(-1);
     cout<<"Array after erasure of -1: ";
     for(int x: S)
         cout << x << " ";
     cout<<endl;
+    cout<<endl;
+}
+
+void mapDemo(){
+    cout<<"FUNCTIONALITIES IN A MAP INT: O(logN) time complexity"<<endl;
+    map<int, int> A;
+    A[1] = 100;
+    A[2] = -1;
+    A[3] = 200;
+    A[100000232] = 1;
+    
+    map<char, int> cnt;			//char(key), int(value)
+    string x = "aniruddh muley";
+    
+    for(char c : x){
+        cnt[c]++;
+    }
+    
+    cout<<"Number of a's in the string: "<<cnt['a']<<endl;
+    cout<<"Number of z's in the string: "<<cnt['z']<<endl;
 }
 
 int main() {
 	// your code goes here
 	vectorDemo();
 	setDemo();
+	mapDemo();
+	
 	return 0;
 }
