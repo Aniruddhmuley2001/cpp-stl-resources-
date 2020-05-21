@@ -35,7 +35,7 @@ void powerOfSTL()
 
 int main() {
 	// your code goes here
-	powerOfSTL();
-	
+	powerOfSTL();	//Done in O(logN) time
+
 	return 0;
 }
