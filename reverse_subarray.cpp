@@ -26,6 +26,8 @@ int main() {
 	return 0;
 }
 
+//Time Complexity: Total = O(Q * N) or O(N)
+
 //Sample input:
 //5 3
 //1 2 3 4 5
