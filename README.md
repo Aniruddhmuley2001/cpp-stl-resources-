@@ -15,6 +15,6 @@ Input format: The first line contains two integers N and Q (1 <= N, Q <= 10^3).
 ### merge_sorted_arrays:
 Given two sorted arrays, A[] and B[], of sizes N and M respectively, merge them into a single array of size N+M and print the array.
 
-Input format:The first line consists of two space-separated integers N, M (1 \leq N,M \leq10^5)
-             The second line consists of N space-separated integers representing the array A[] (1 \leq A[i] \leq 10^5)
-             The third line consists of M space-separated integers representing the array B[] (1 \leq B[i] \leq 10^5)
+Input format:The first line consists of two space-separated integers N, M (1 <= N, M <= 10^5)
+             The second line consists of N space-separated integers representing the array A[] (1 <= A[i] <= 10^5)
+             The third line consists of M space-separated integers representing the array B[] (1 <= B[i] <= 10^5)
