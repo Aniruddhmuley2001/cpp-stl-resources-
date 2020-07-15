@@ -18,3 +18,6 @@ Given two sorted arrays, A[] and B[], of sizes N and M respectively, merge them 
 Input format:The first line consists of two space-separated integers N, M (1 <= N, M <= 10^5)
              The second line consists of N space-separated integers representing the array A[] (1 <= A[i] <= 10^5)
              The third line consists of M space-separated integers representing the array B[] (1 <= B[i] <= 10^5)
+
+### Sieve of Eratosthenes:
+An efficient algorithm to generate prime numbers between the values 1 to N. Time Complexity is O(N * log(log N)). The standard method (using sqrt(N)) gives the time complexity of O(N * sqrt(N)).
