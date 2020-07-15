@@ -20,4 +20,4 @@ Input format:The first line consists of two space-separated integers N, M (1 <= 
              The third line consists of M space-separated integers representing the array B[] (1 <= B[i] <= 10^5)
 
 ### Sieve of Eratosthenes:
-An efficient algorithm to generate prime numbers between the values 1 to N. Time Complexity is O(N * log(log N)). The standard method (using sqrt(N)) gives the time complexity of O(N * sqrt(N)).
+An efficient algorithm to generate prime numbers between the values 1 to N. Time Complexity is O(N * log(log N)). This algorithm is an efficient alternative, as the standard method (using sqrt(N)) gives the time complexity of O(N * sqrt(N)).
