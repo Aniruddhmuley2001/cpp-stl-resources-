@@ -137,6 +137,7 @@ void mapDemo(){
 
 int main() {
 	// your code goes here
+	fast
 	vectorDemo();
 	setDemo();
 	mapDemo();
