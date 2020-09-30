@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
 int main() {
+	fast
 	int N;
 	cin >> N;
 	vector<bool> is_prime(N+1, true);   //N+1 size to access is_prime[N]
