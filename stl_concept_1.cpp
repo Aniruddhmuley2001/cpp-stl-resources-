@@ -3,7 +3,7 @@
 #include <algorithm>    //Required for sort()
 #include <set>          //Required for set<int>
 #include <map>          //Required for map<int, int>
-
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);  //we can do better and reduce the runtime a lot by adding two lines.
 using namespace std;
 
 bool f(int x, int y)
