@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);//we can do better and reduce the runtime a lot by adding two lines.
 int main() {
 	fast
 	int N;
