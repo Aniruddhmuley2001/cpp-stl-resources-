@@ -1,5 +1,5 @@
 # cpp-stl-resources-
-This repo contains the code through which Rachit Jain explains STL in C++. This will be helpful for revision with step by step approach. Also, it includes codes from the Educative course work.
+This repo contains a collection of CPP STL functions, some algorithms and Data Structure concepts in C and CPP.
 
 ## Problem Statements
 ### application_1:
